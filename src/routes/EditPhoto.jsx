@@ -14,7 +14,7 @@ const EditPhoto = () => {
     e.preventDefault();
     const date = new Date()
     const todayDate = `${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`
-    await fetch(`https://gallery-app-server.vercel.app/photos${id}`, {
+    await fetch(`https://gallery-app-server.vercel.app/photos/${id}`, {
       method: "PATCH",
       body: JSON.stringify({ imageUrl, captions, updatedAt: todayDate }),
       headers: {
